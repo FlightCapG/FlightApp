@@ -1,0 +1,47 @@
+<table>
+    <tr>
+        <td>
+            <h2>Passenger By PRN</h2>
+            <input type="text" #prnNumber>
+            <button (click)="getPassengers3(prnNumber.value)">Search</button>
+
+        </td>
+    </tr>
+    <tr>PRNNumber : {{passenger.prnNumber}}</tr>
+    <tr>PassengerName : {{passenger.passengerName}}</tr>
+    <tr>PassengerAge : {{passenger.passengerAge}}</tr>
+    <tr>City : {{passenger.city}}</tr>
+    <tr>PhoneNumber : {{passenger.phoneNumber}}</tr>
+    <tr>Email : {{passenger.email}}</tr>
+    <tr>
+        <td>
+
+            <h2>Passenger By Name</h2>
+            <input type="text" #passengerName>
+            <button (click)="getPassengers1(passengerName.value)">Search</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2>Passenger By City</h2>
+            <input type="text" #city>
+            <button (click)="getPassengers2(city.value)">Search</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2>All Passenger List</h2>
+
+            <div *ngFor="let x of allPassengers">
+                <table>
+                    <tr>PRNNumber : {{x.prnNumber}}</tr>
+                    <tr>PassengerName : {{x.passengerName}}</tr>
+                    <tr>PassengerAge : {{x.passengerAge}}</tr>
+                    <tr>City : {{x.city}}</tr>
+                    <tr>PhoneNumber : {{x.phoneNumber}}</tr>
+                    <tr>Email : {{x.email}}</tr><br />
+                </table>
+            </div>
+
+        </td>
+</table>
